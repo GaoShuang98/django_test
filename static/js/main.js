@@ -12,6 +12,14 @@ function img_positioning() {
     alert("图像定位");
 }
 
-function myFunction() {
-    alert("你好，我是一个警告框！");
+function target_positioning() {
+    alert("目标定位");
+}
+
+function monitoring() {
+    alert("舆情监测");
+}
+
+function situational_awareness() {
+    alert("势态感知");
 }
