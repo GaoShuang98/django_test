@@ -35,17 +35,17 @@
         <td id="main-menu">
             <div id="father">
                 <div class="btn-container">
-                    <button onclick="import_img">导入图像</button>
+                    <button onclick="import_img()">导入图像</button>
                     <br>
-                    <button onclick="import_img">图像定位</button>
+                    <button onclick="img_positioning()">图像定位</button>
                     <br>
-                    <button onclick="import_img">目标定位</button>
+                    <button onclick="import_img()">目标定位</button>
                     <br>
                     <button onclick="fly2school(viewer)">学校视角</button>
                     <br>
-                    <button onclick="import_img">舆情监测</button>
+                    <button onclick="import_img()">舆情监测</button>
                     <br>
-                    <button onclick="import_img">事态感知</button>
+                    <button onclick="import_img()">事态感知</button>
                     <br>
 
 
@@ -73,6 +73,11 @@
                         destination: Cesium.Cartesian3.fromDegrees(120.435314, 35.960521, 10000000.0),
                     }); //相机自动飞到中国上空
                 </script>
+            </div>
+            <div>
+                <canvas class="canvas">
+
+                </canvas>
             </div>
         </td>
     </tr>
