@@ -19,5 +19,7 @@ from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index)
+    path('', views.index),
+    path('import_img', views.import_img),
+    path('target_positioning', views.target_positioning)
 ]

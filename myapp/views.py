@@ -6,3 +6,8 @@ from django.http import HttpResponse, request
 def index(request):
     return render(request, 'index.html')
 
+def import_img(request):
+    return render(request, 'img_positioning.html')
+
+def target_positioning(request):
+    return render(request, 'target_positioning.html')
