@@ -21,11 +21,12 @@
         <td colspan="2" style="background-color:rgba(19,44,129,0.23); opacity:0.8; ">
             <div class="logo">
                 <a href="www.baidu.com">
-                    <img src="../static/imgs/xd.png" width="80" height="80"  alt="信息工程大学"/>
+                    <img src="../static/imgs/xd.png" width="80" height="80" alt="信息工程大学"/>
                 </a>
             </div>
             <div class="header" id="header-title">
-                <h1 link="http://127.0.0.1:8000/" style="text-align:center; opacity:0.5; cursor: pointer"><b>定位系统</b></h1>
+                <h1 link="http://127.0.0.1:8000/" style="text-align:center; opacity:0.5; cursor: pointer"><b>定位系统</b>
+                </h1>
             </div>
 
         </td>
@@ -45,12 +46,12 @@
                     <br>
                     <button onclick="situational_awareness()">势态感知</button>
                     <br>
-
-
                 </div>
             </div>
         </td>
-        <td style="background-color:rgba(15,73,201,0.42);height:100%;width:90%;">
+        <td style="background-color:rgba(15,73,201,0.2);height:100%;width:100%;">
+
+
             <div id="cesiumContainer" class="fullSize">
                 <script>
                     token_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlY2Y0NDkzZS05ZWYzLTQ0NTQtOTM0OC1hODI1YWZlNGE3MDEiLCJpZCI6ODUxOTAsImlhdCI6MTY0NjgzNTE4OH0._cSQsUPts0jXVYrw5r-8RP1an5oECzjKRj99FN9Apx4';
@@ -65,13 +66,18 @@
                         fullscreenButton: true,        //是否显示全屏按钮
                         timeline: true,                 //时间轴控件
                         animation: true,                //动画控件
-                    });
+                        imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
+                    url: 'http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer'
+                }) //加载蓝色的默认地球
+        });
+
                     viewer.scene.debugShowFramesPerSecond = true;  // 显示帧率
                     viewer.camera.flyTo({
                         destination: Cesium.Cartesian3.fromDegrees(120.435314, 35.960521, 10000000.0),
                     }); //相机自动飞到中国上空
                 </script>
             </div>
+
         </td>
     </tr>
 
