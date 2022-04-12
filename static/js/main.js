@@ -66,7 +66,7 @@ function monitoring() {
 }
 
 
-function situational_awareness() {
+function situation_awareness() {
           var situation_awareness = document.getElementById("situation_awareness");
     if (son_page_name === "situation_awareness") {
         situation_awareness.style.display = 'none';
