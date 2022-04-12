@@ -33,8 +33,7 @@
     </tr>
 
     <tr>
-        <td id="main-menu">
-            <div id="father">
+        <td class="menu-button">
                 <div class="btn-container">
                     <button onclick="img_positioning()">图像定位</button>
                     <br>
@@ -47,10 +46,6 @@
                     <button onclick="situational_awareness()">势态感知</button>
                     <br>
                 </div>
-            </div>
-        </td>
-        <td style="background-color:rgba(15,73,201,0.2);height:100%;width:100%;">
-
 
             <div id="cesiumContainer" class="fullSize">
                 <script>
@@ -67,9 +62,9 @@
                         timeline: true,                 //时间轴控件
                         animation: true,                //动画控件
                         imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
-                    url: 'http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer'
-                }) //加载蓝色的默认地球
-        });
+                            url: 'http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer'
+                        }) //加载蓝色的默认地球
+                    });
 
                     viewer.scene.debugShowFramesPerSecond = true;  // 显示帧率
                     viewer.camera.flyTo({
