@@ -16,8 +16,10 @@
 </head>
 <body id="body">
 
-<table class="body-table">
-    <tr>
+ <!--
+ <table class="body-table">
+
+     <tr>
         <td colspan="2" style="background-color:rgba(19,44,129,0.23); opacity:0.8; ">
             <div class="logo">
                 <a href="www.baidu.com">
@@ -33,19 +35,26 @@
     </tr>
 
     <tr>
+
         <td class="menu-button">
-                <div class="btn-container">
-                    <button onclick="img_positioning()">图像定位</button>
-                    <br>
-                    <button onclick="target_positioning()">目标定位</button>
-                    <br>
-                    <button onclick="fly2school(viewer)">学校视角</button>
-                    <br>
-                    <button onclick="monitoring()">舆情监测</button>
-                    <br>
-                    <button onclick="situational_awareness()">势态感知</button>
-                    <br>
-                </div>
+ -->
+            <div class="btn-container">
+                <button onclick="img_positioning()">图像定位</button>
+                <br>
+                <button onclick="target_positioning()">目标定位</button>
+                <br>
+                <button onclick="fly2school(viewer)">学校视角</button>
+                <br>
+                <button onclick="monitoring()">舆情监测</button>
+                <br>
+                <button onclick="situational_awareness()">势态感知</button>
+                <br>
+            </div>
+
+             <div class="son_page" id="img_positioning">
+                <b>图像定位的子页面</b>
+                 <button onclick="import_img()">导入图像</button>
+            </div>
 
             <div id="cesiumContainer" class="fullSize">
                 <script>
@@ -58,7 +67,7 @@
                         navigationHelpButton: true,    //是否显示帮助信息控件
                         baseLayerPicker: true,         //是否显示图层选择控件
                         homeButton: true,              //是否显示Home按钮
-                        fullscreenButton: true,        //是否显示全屏按钮
+                        fullscreenButton: true,        //是否显示全屏按钮1··············
                         timeline: true,                 //时间轴控件
                         animation: true,                //动画控件
                         imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
@@ -72,16 +81,18 @@
                     }); //相机自动飞到中国上空
                 </script>
             </div>
-
-        </td>
+<!--
+         </td>
     </tr>
-
-    <tr>
+     <tr>
         <td colspan="2" style="background-color:rgba(1,27,75,0.4);text-align:center; ">
             版权 ©XXGCDX
         </td>
     </tr>
 </table>
+-->
+
+
 
 </body>
 

@@ -2,7 +2,7 @@
 
 .body-table{
     height: 100%;
-    width: 100%;
+    width: 15%;
     padding: 0;
     margin: 0;
 }
@@ -36,20 +36,6 @@
     opacity: 1;
 }
 
-.nav-wrapper {
-    height: 10%;
-    width: auto;
-    overflow: hidden;
-    text-align: center;
-    float: top;
-}
-
-/*.menu-item {*/
-/*    padding: 0;*/
-/*    float: start;*/
-/*    fill-opacity: 0.2;*/
-/*    background: transparent;*/
-/*}*/
 
 .cesium-widget {
     width: 100%;
@@ -64,6 +50,7 @@
     /*position: relative;*/
     padding: 0;
     margin: 0;
+    border: 0;
     overflow: hidden;
     z-index: 10;
 }
@@ -77,15 +64,6 @@
     border: 0;
 }
 
-#main-menu {
-    width: 10%;
-    top: 0;
-    padding: 0;
-    position: relative;
-    color: #0435d9;
-    border: 0;
-    align-items: center;
-}
 
 #body {
     background: url(../imgs/img.png) repeat #0a0a0a;
@@ -95,14 +73,14 @@
 
 .btn-container {
     position: absolute;
-    left: 20px;
-    top: 25%;
+    left: 2%;
+    top: 20%;
     padding: 5px 5px;
     border-radius: 4px;
     border: 1px solid rgba(128, 128, 128, 0.8);
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 3px 14px rgb(128 128 128 / 50%);
+    color: rgba(44, 107, 203, 0.76);
+    /*background: rgba(0, 0, 0, 0.4);*/
+    box-shadow: 0 3px 14px rgba(45, 67, 175, 0.65);
     text-align: center;
     z-index: 100;
 }
@@ -111,14 +89,14 @@ button {
     background: transparent;
     width: auto;
     height: auto;
-    /*border: 1px solid #00d0ffb8;*/
-    color: white;
+    border: 1px solid rgba(39, 63, 122, 0.72);
+    color: #afb8e0;
     padding: 7px 9px;
     border-radius: 2px;
     margin: 3px;
     cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
-    /*font-size: 16px;*/
+    font-family: Times, serif;
+    font-size: 16px;
     top: 0;
     bottom: 0;
     vertical-align: middle;
@@ -135,5 +113,20 @@ button {
     background-color:rgba(15,73,201,0.2);
     height:100%;
     width:100%;
+}
+
+#img_positioning{
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    opacity: 0.5;
+    z-index: 100;
+    background-color: #122fea;
+    color: #22ee22;
+    text-align: center;
+    font-size: 40px;
 }
 
