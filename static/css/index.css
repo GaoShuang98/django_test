@@ -1,132 +1,60 @@
 @charset "utf-8";
 
-.body-table{
-    height: 100%;
-    width: 15%;
-    padding: 0;
-    margin: 0;
-}
-
-.logo {
-    padding: 2px;
-    margin-top: 2px;
-    float: left;
-    opacity: 0.5;
-}
-
-.header-wrapper a {
-    color: #bac8e1;
-    opacity: 0.1;
-}
-
-.header-wrapper .view-tab {
-    height: 60px;
-    line-height: 60px;
-    font-size: 40PX;
-    float: right;
-}
-
-.body-table {
-    height: 100%;
-    width: 100%;
-    padding: 0 0 0 0;
-    border: 0;
-    margin: 0 0 0 0;
-    position: absolute;
-    opacity: 1;
-}
-
-
-.cesium-widget {
-    width: 100%;
-    height: 100%;
-    touch-action: none;
-    background-color: #393a3b;
-}
-
 #cesiumContainer {
     width: 100%;
     height: 100%;
-    /*position: relative;*/
+    position: absolute;
     padding: 0;
     margin: 0;
     border: 0;
     overflow: hidden;
-    z-index: 10;
-}
-
-#header-title {
-    width: 100%;
-    top: 0;
-    padding: 0;
-    position: relative;
-    color: #f6ea06;
-    border: 0;
-}
-
-
-#body {
-    background: url(../imgs/img.png) repeat #0a0a0a;
-    background-image: url(../imgs/bg.gif);
-    background-color: rgb(10, 10, 10);
+    z-index: 1;
 }
 
 .btn-container {
     position: absolute;
-    left: 2%;
-    top: 20%;
+    left: 4%;
+    top: 3%;
     padding: 5px 5px;
     border-radius: 4px;
-    border: 1px solid rgba(128, 128, 128, 0.8);
-    color: rgba(44, 107, 203, 0.76);
-    /*background: rgba(0, 0, 0, 0.4);*/
-    box-shadow: 0 3px 14px rgba(45, 67, 175, 0.65);
+    border: 0 solid rgb(4, 53, 217);
+    color: rgba(4, 53, 217, 0.7);
+    background: rgba(0, 0, 0, 0.22);
+    box-shadow: 0 3px 14px rgba(127, 179, 238, 0.74);
     text-align: center;
     z-index: 100;
 }
 
-button {
+.button {
+    cursor: pointer;
     background: transparent;
     width: auto;
     height: auto;
-    border: 1px solid rgba(39, 63, 122, 0.72);
+    border: 1px solid steelblue;
     color: #afb8e0;
     padding: 7px 9px;
     border-radius: 2px;
     margin: 3px;
-    cursor: pointer;
-    font-family: Times, serif;
+    font-family: "heiti", Times, serif;
     font-size: 16px;
     top: 0;
     bottom: 0;
     vertical-align: middle;
 }
 
-#div_img_positioning {
-    color: #22ee22;
-    /*align-content: center;*/
-    text-align: center;
-    font-size: 40px;
-}
-
-.menu-button{
-    background-color:rgba(15,73,201,0.2);
-    height:100%;
-    width:100%;
-}
-
-#img_positioning{
+.son_page{
     display: none;
     position: absolute;
     top: 10%;
     left: 10%;
     width: 80%;
     height: 80%;
-    opacity: 0.5;
+    opacity: 0.7;
     z-index: 100;
-    background-color: #122fea;
+    background-color: #102298;
     color: #22ee22;
     text-align: center;
     font-size: 40px;
 }
+
 

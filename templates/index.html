@@ -8,14 +8,12 @@
     <title>localization sys.</title>
     <script src="../static/Cesium/Cesium.js"></script>
     <script src="../static/js/main.js"></script>
-    <style>
-        @import url("../static/css/index.css");
-    </style>
+
     <link rel="stylesheet" href="../static/css/index.css">
     <link rel="stylesheet" href="../static/Cesium/Widgets/widgets.css">
 </head>
-<body id="body">
 
+<body id="body">
  <!--
  <table class="body-table">
 
@@ -35,47 +33,61 @@
     </tr>
 
     <tr>
-
+-->
         <td class="menu-button">
- -->
+
             <div class="btn-container">
-                <button onclick="img_positioning()">图像定位</button>
-                <br>
-                <button onclick="target_positioning()">目标定位</button>
-                <br>
-                <button onclick="fly2school(viewer)">学校视角</button>
-                <br>
-                <button onclick="monitoring()">舆情监测</button>
-                <br>
-                <button onclick="situational_awareness()">势态感知</button>
-                <br>
+                <button class="button" onclick="img_positioning()">图像定位</button>
+
+                <button class="button" onclick="target_positioning()">目标定位</button>
+
+                <button class="button" onclick="fly2school(viewer)">学校视角</button>
+
+                <button class="button" onclick="monitoring()">舆情监测</button>
+
+                <button class="button" onclick="situational_awareness()">态势感知</button>
+
             </div>
 
              <div class="son_page" id="img_positioning">
+                 <divh></divh>
                 <b>图像定位的子页面</b>
-                 <button onclick="import_img()">导入图像</button>
+                 <button class="button" onclick="import_img()">导入图像</button>
             </div>
 
-            <div id="cesiumContainer" class="fullSize">
+            <div class="son_page" id="target_positioning">
+                <b>目标定位的子页面</b>
+                 <button class="button" onclick="import_img()">导入图像</button>
+            </div>
+             <div class="son_page" id="monitoring">
+                <b>舆情监测的子页面</b>
+                 <button class="button" onclick="monitoring()">舆情监测</button>
+            </div>
+             <div class="son_page" id="situation_awareness">
+                <b>势态感知的子页面</b>
+                 <button class="button" onclick="situational_awareness()">导入图像</button>
+            </div>
+
+            <div id="cesiumContainer">
                 <script>
                     token_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlY2Y0NDkzZS05ZWYzLTQ0NTQtOTM0OC1hODI1YWZlNGE3MDEiLCJpZCI6ODUxOTAsImlhdCI6MTY0NjgzNTE4OH0._cSQsUPts0jXVYrw5r-8RP1an5oECzjKRj99FN9Apx4';
 
                     Cesium.Ion.defaultAccessToken = token_key
                     var viewer = new Cesium.Viewer('cesiumContainer', {
-                        geocoder: true,                //是否显示地名查找控件
-                        sceneModePicker: true,         //是否显示投影方式控件
-                        navigationHelpButton: true,    //是否显示帮助信息控件
-                        baseLayerPicker: true,         //是否显示图层选择控件
-                        homeButton: true,              //是否显示Home按钮
-                        fullscreenButton: true,        //是否显示全屏按钮1··············
-                        timeline: true,                 //时间轴控件
-                        animation: true,                //动画控件
+                        geocoder: false,                //是否显示地名查找控件
+                        sceneModePicker: false,         //是否显示投影方式控件
+                        navigationHelpButton: false,    //是否显示帮助信息控件
+                        baseLayerPicker: false,         //是否显示图层选择控件
+                        homeButton: false,              //是否显示Home按钮
+                        fullscreenButton: false,        //是否显示全屏按钮1··············
+                        timeline: false,                 //时间轴控件
+                        //animation: false,                //动画控件
                         imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
                             url: 'http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer'
                         }) //加载蓝色的默认地球
                     });
 
-                    viewer.scene.debugShowFramesPerSecond = true;  // 显示帧率
+                    //viewer.scene.debugShowFramesPerSecond = true;  // 显示帧率
                     viewer.camera.flyTo({
                         destination: Cesium.Cartesian3.fromDegrees(120.435314, 35.960521, 10000000.0),
                     }); //相机自动飞到中国上空
@@ -91,9 +103,6 @@
     </tr>
 </table>
 -->
-
-
-
 </body>
 
 </html>
