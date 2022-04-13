@@ -24,48 +24,52 @@
 </div>
 
 <div class="son_page" id="img_positioning">
-    <div class="son_page_title_div"><b>◈图像定位◈</b></div>
+    <div class="son_page_title_div"><b>图像定位</b></div>
     <div class="son_page_button_div">
-        <button class="son_button" onclick="import_img()">导入图像1</button>
+        <button class="son_button" onclick="import_img()">导入图像</button>
         <br>
-        <button class="son_button" onclick="import_img()">导入图像2</button>
+        <button class="son_button" onclick="import_img()">开始检索</button>
         <br>
-        <button class="son_button" onclick="import_img()">导入图像3</button>
+        <button class="son_button" onclick="import_img()">位置显示</button>
         <br>
-        <button class="son_button" onclick="import_img()">导入图像4</button>
+        <button class="son_button" onclick="import_img()">  ----  </button>
         <br>
-        <button class="son_button" onclick="import_img()">导入图像5</button>
+        <button class="son_button" onclick="import_img()">  ----  </button>
     </div>
     <div class="son_page_body_div">
         <div class="img_div">
-            <canvas class="img_canvas" id="query_img">
-                <script><img src="../static/imgs/xd.png" alt="校徽"></script>
+            <canvas class="img_canvas" id="query_img_canvas">
+
             </canvas>
+            <div class="son_page_label_div">搜索图像名称</div>
         </div>
-        <div class="img_div">
-            <canvas class="img_canvas" id="query_img">
-                <img src="../static/imgs/xd.png" alt="校徽">
-            </canvas>
-            <canvas class="img_canvas" id="query_img">
-                <img src="../static/imgs/xd.png" alt="校徽">
-            </canvas>
-            <canvas class="img_canvas" id="query_img">
-                <img src="../static/imgs/xd.png" alt="校徽">
-            </canvas>
+
+        <div class="result_imgs_div">
+            <div class="img_div" id="result_img_div1">
+                <canvas class="img_canvas" id="result_img_canvas1">
+
+                </canvas>
+                <div class="son_page_label_div" id="result_img_label1">检索结果图1</div>
+            </div>
+
+            <div class="img_div" id="result_img_div2">
+                <canvas class="img_canvas" id="result_img_canvas2">
+
+                </canvas>
+                <div class="son_page_label_div" id="result_img_label2">检索结果图2</div>
+            </div>
+
+            <div class="img_div" id="result_img_div3">
+                <canvas class="img_canvas" id="result_img_canvas3">
+
+                </canvas>
+                <div class="son_page_label_div" id="result_img_label3">检索结果图3</div>
+            </div>
         </div>
-        <div class="img_div">
-            <canvas class="img_canvas" id="query_img">
-                <img src="../static/imgs/xd.png" alt="校徽">
-            </canvas>
-            <canvas class="img_canvas" id="query_img">
-                <img src="../static/imgs/xd.png" alt="校徽">
-            </canvas>
-            <canvas class="img_canvas" id="query_img">
-                <img src="../static/imgs/xd.png" alt="校徽">
-            </canvas>
-        </div>
+
     </div>
 </div>
+
 <div class="son_page" id="target_positioning">
     <div class="son_page_title_div"><b>目标定位</b></div>
 

@@ -61,11 +61,12 @@
 .son_page_title_div {
     font-size: 25px;
     border-radius: 4px;
+    border-color: #66ccee;
     color: #1ffc06;
     text-shadow: 1px 1px #0d4b05;
-    /*position: absolute;*/
-    /*left: 5%;*/
-    /*top: 5%;*/
+    position: absolute;
+    left: 1%;
+    top: 2%;
 }
 
 .son_page_button_div {
@@ -97,19 +98,34 @@
     border: 1px solid #6498f5;
     position: absolute;
     /*background-color: #22ee22;*/
-    top: 8%;
+    top: 2%;
     left: 10%;
     right: 1%;
     bottom: 2%;
 }
 
 .img_div {
-    /*border: 1px solid red;*/
+    /*border: 1px solid rgb(141, 177, 243);*/
 }
 
 .img_canvas {
-    border-color: #003da8;
     background-color: #111111;
+    width: 350px;
+    height: 220px;
+}
+
+.son_page_label_div{
+    font-size: 20px;
+    align-items: center;
+    margin: 4px 4px;
+    border: 4px;
+    padding: 2px 2px;
+    color: #8cb987;
+}
+
+.result_imgs_div{
+    display: flex;
+    justify-content: space-around;
 }
 
 
