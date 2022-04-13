@@ -14,93 +14,98 @@
 </head>
 
 <body id="body">
-<!--
-<table class="body-table">
 
-    <tr>
-       <td colspan="2" style="background-color:rgba(19,44,129,0.23); opacity:0.8; ">
-           <div class="logo">
-               <a href="www.baidu.com">
-                   <img src="../static/imgs/xd.png" width="80" height="80" alt="信息工程大学"/>
-               </a>
-           </div>
-           <div class="header" id="header-title">
-               <h1 link="http://127.0.0.1:8000/" style="text-align:center; opacity:0.5; cursor: pointer"><b>定位系统</b>
-               </h1>
-           </div>
+<div class="btn-container">
+    <button class="button" onclick="img_positioning()">图像定位</button>
+    <button class="button" onclick="target_positioning()">目标定位</button>
+    <button class="button" onclick="fly2school(viewer)">学校视角</button>
+    <button class="button" onclick="monitoring()">舆情监测</button>
+    <button class="button" onclick="situation_awareness()">态势感知</button>
+</div>
 
-       </td>
-   </tr>
-
-   <tr>
--->
-<td class="menu-button">
-
-    <div class="btn-container">
-        <button class="button" onclick="img_positioning()">图像定位</button>
-
-        <button class="button" onclick="target_positioning()">目标定位</button>
-
-        <button class="button" onclick="fly2school(viewer)">学校视角</button>
-
-        <button class="button" onclick="monitoring()">舆情监测</button>
-
-        <button class="button" onclick="situation_awareness()">态势感知</button>
-
+<div class="son_page" id="img_positioning">
+    <div class="son_page_title_div"><b>◈图像定位◈</b></div>
+    <div class="son_page_button_div">
+        <button class="son_button" onclick="import_img()">导入图像1</button>
+        <br>
+        <button class="son_button" onclick="import_img()">导入图像2</button>
+        <br>
+        <button class="son_button" onclick="import_img()">导入图像3</button>
+        <br>
+        <button class="son_button" onclick="import_img()">导入图像4</button>
+        <br>
+        <button class="son_button" onclick="import_img()">导入图像5</button>
     </div>
+    <div class="son_page_body_div">
+        <div class="img_div">
+            <canvas class="img_canvas" id="query_img">
+                <script><img src="../static/imgs/xd.png" alt="校徽"></script>
+            </canvas>
+        </div>
+        <div class="img_div">
+            <canvas class="img_canvas" id="query_img">
+                <img src="../static/imgs/xd.png" alt="校徽">
+            </canvas>
+            <canvas class="img_canvas" id="query_img">
+                <img src="../static/imgs/xd.png" alt="校徽">
+            </canvas>
+            <canvas class="img_canvas" id="query_img">
+                <img src="../static/imgs/xd.png" alt="校徽">
+            </canvas>
+        </div>
+        <div class="img_div">
+            <canvas class="img_canvas" id="query_img">
+                <img src="../static/imgs/xd.png" alt="校徽">
+            </canvas>
+            <canvas class="img_canvas" id="query_img">
+                <img src="../static/imgs/xd.png" alt="校徽">
+            </canvas>
+            <canvas class="img_canvas" id="query_img">
+                <img src="../static/imgs/xd.png" alt="校徽">
+            </canvas>
+        </div>
+    </div>
+</div>
+<div class="son_page" id="target_positioning">
+    <div class="son_page_title_div"><b>目标定位</b></div>
 
-    <div class="son_page" id="img_positioning">
-        <b>图像定位的子页面</b>
-        <button class="button" onclick="import_img()">导入图像</button>
-    </div>
-    <div class="son_page" id="target_positioning">
-        <b>目标定位的子页面</b>
-        <button class="button" onclick="import_img()">导入目标图像</button>
-    </div>
-    <div class="son_page" id="monitoring">
-        <b>舆情监测的子页面</b>
-        <button class="button" onclick="monitoring()">舆情监测</button>
-    </div>
-    <div class="son_page" id="situation_awareness">
-        <b>势态感知的子页面</b>
-        <button class="button" onclick="situation_awareness()">势态感知</button>
-    </div>
+    <button class="button" onclick="import_img()">导入目标图像</button>
+</div>
+<div class="son_page" id="monitoring">
+    <div class="son_page_title_div"><b>舆情监测</b></div>
+    <button class="button" onclick="monitoring()">舆情监测</button>
+</div>
+<div class="son_page" id="situation_awareness">
+    <div class="son_page_title_div"><b>势态感知</b></div>
+    <button class="button" onclick="situation_awareness()">势态感知</button>
+</div>
 
-    <div id="cesiumContainer">
-        <script>
-            token_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlY2Y0NDkzZS05ZWYzLTQ0NTQtOTM0OC1hODI1YWZlNGE3MDEiLCJpZCI6ODUxOTAsImlhdCI6MTY0NjgzNTE4OH0._cSQsUPts0jXVYrw5r-8RP1an5oECzjKRj99FN9Apx4';
+<div id="cesiumContainer">
+    <script>
+        token_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlY2Y0NDkzZS05ZWYzLTQ0NTQtOTM0OC1hODI1YWZlNGE3MDEiLCJpZCI6ODUxOTAsImlhdCI6MTY0NjgzNTE4OH0._cSQsUPts0jXVYrw5r-8RP1an5oECzjKRj99FN9Apx4';
 
-            Cesium.Ion.defaultAccessToken = token_key
-            var viewer = new Cesium.Viewer('cesiumContainer', {
-                geocoder: false,                //是否显示地名查找控件
-                sceneModePicker: false,         //是否显示投影方式控件
-                navigationHelpButton: false,    //是否显示帮助信息控件
-                // baseLayerPicker: false,         //是否显示图层选择控件
-                homeButton: false,              //是否显示Home按钮
-                fullscreenButton: false,        //是否显示全屏按钮1··············
-                timeline: false,                 //时间轴控件
-                //animation: false,                //动画控件
-                imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
-                    url: 'http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer'
-                }) //加载蓝色的默认地球
-            });
+        Cesium.Ion.defaultAccessToken = token_key
+        var viewer = new Cesium.Viewer('cesiumContainer', {
+            geocoder: false,                //是否显示地名查找控件
+            sceneModePicker: false,         //是否显示投影方式控件
+            navigationHelpButton: false,    //是否显示帮助信息控件
+            // baseLayerPicker: false,         //是否显示图层选择控件
+            homeButton: false,              //是否显示Home按钮
+            fullscreenButton: false,        //是否显示全屏按钮1··············
+            timeline: false,                 //时间轴控件
+            //animation: false,                //动画控件
+            imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
+                url: 'http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer'
+            }) //加载蓝色的默认地球
+        });
 
-            //viewer.scene.debugShowFramesPerSecond = true;  // 显示帧率
-            viewer.camera.flyTo({
-                destination: Cesium.Cartesian3.fromDegrees(120.435314, 35.960521, 10000000.0),
-            }); //相机自动飞到中国上空
-        </script>
-    </div>
-    <!--
-             </td>
-        </tr>
-         <tr>
-            <td colspan="2" style="background-color:rgba(1,27,75,0.4);text-align:center; ">
-                版权 ©XXGCDX
-            </td>
-        </tr>
-    </table>
-    -->
+        //viewer.scene.debugShowFramesPerSecond = true;  // 显示帧率
+        viewer.camera.flyTo({
+            destination: Cesium.Cartesian3.fromDegrees(120.435314, 35.960521, 10000000.0),
+        }); //相机自动飞到中国上空
+    </script>
+</div>
+
 </body>
 
 </html>

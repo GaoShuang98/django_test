@@ -33,7 +33,7 @@
     border: 1px solid steelblue;
     color: #afb8e0;
     padding: 7px 9px;
-    border-radius: 2px;
+    border-radius: 5px;
     margin: 3px;
     font-family: "heiti", Times, serif;
     font-size: 16px;
@@ -42,7 +42,7 @@
     vertical-align: middle;
 }
 
-.son_page{
+.son_page {
     display: none;
     position: absolute;
     top: 10%;
@@ -51,11 +51,65 @@
     height: 80%;
     opacity: 0.7;
     z-index: 100;
-    background-color: #393a3b;
-    color: #22ee22;
+    background-color: #4a5e86;
     text-align: center;
     font-size: 40px;
-    border: 2px solid #003da8;
+    /*border: 2px solid #003da8;*/
+    border-radius: 6px;
+}
+
+.son_page_title_div {
+    font-size: 25px;
+    border-radius: 4px;
+    color: #1ffc06;
+    text-shadow: 1px 1px #0d4b05;
+    /*position: absolute;*/
+    /*left: 5%;*/
+    /*top: 5%;*/
+}
+
+.son_page_button_div {
+    /*border: 1px solid #1674d2;*/
+    border-radius: 4px;
+    position: absolute;
+    left: 1%;
+    top: 25%;
+}
+
+.son_button {
+    cursor: pointer;
+    background: transparent;
+    width: auto;
+    height: auto;
+    border: 1px solid #bdc0c9;
+    color: #d3d5de;
+    padding: 7px 9px;
+    border-radius: 5px;
+    margin: 2px;
+    font-family: "microsoft yehei", Times, serif;
+    font-size: 16px;
+    top: 0;
+    bottom: 0;
+    vertical-align: middle;
+}
+
+.son_page_body_div {
+    border: 1px solid #6498f5;
+    position: absolute;
+    /*background-color: #22ee22;*/
+    top: 8%;
+    left: 10%;
+    right: 1%;
+    bottom: 2%;
+}
+
+.img_div {
+    /*border: 1px solid red;*/
+}
+
+.img_canvas {
+    border-color: #003da8;
+    background-color: #111111;
 }
 
 
