@@ -3,12 +3,12 @@ var son_page_name = 'none'
 function fly2school(viewer) {
     var element = document.getElementById("img_positioning");
     element.style.display = 'none'
-    // viewer.camera.flyTo({
-    //     destination: Cesium.Cartesian3.fromDegrees(113.570, 34.8125, 3500.0),
-    // });
     viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(9.18141, 45.47121, 10000.0),
+        destination: Cesium.Cartesian3.fromDegrees(113.570, 34.8125, 3500.0),
     });
+    // viewer.camera.flyTo({
+    //     destination: Cesium.Cartesian3.fromDegrees(9.18141, 45.47121, 10000.0),
+    // });
 }
 
 
@@ -91,9 +91,8 @@ function show_points(cesium) {
 
     for (i = 0; i < latitude.length; i++) {
         for (j = 0; j < longitude.length; j++) {
-            new cesium.PointGraphics({color:Cesium.Color.fromCssColorString("#FFFF00"), pixelSize:10})
+            // new cesium.PointGraphics({color:Cesium.Color.fromCssColorString("#FFFF00"), pixelSize:10})
         }
     }
-
-
 }
+
