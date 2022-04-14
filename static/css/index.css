@@ -70,11 +70,12 @@
 }
 
 .son_page_button_div {
-    /*border: 1px solid #1674d2;*/
+    /*border: 2px solid #6498f5;*/
     border-radius: 4px;
     position: absolute;
     left: 1%;
     top: 25%;
+    margin: 4px;
 }
 
 .son_button {
@@ -86,7 +87,7 @@
     color: #d3d5de;
     padding: 7px 9px;
     border-radius: 5px;
-    margin: 2px;
+    margin: 5px;
     font-family: "microsoft yehei", Times, serif;
     font-size: 16px;
     top: 0;
@@ -96,6 +97,7 @@
 
 .son_page_body_div {
     border: 1px solid #6498f5;
+    border-radius: 4px;
     position: absolute;
     /*background-color: #22ee22;*/
     top: 2%;
@@ -109,9 +111,10 @@
 }
 
 .img_canvas {
-    background-color: #111111;
-    width: 350px;
-    height: 220px;
+    background-color: rgba(17, 17, 17, 0.58);
+    width: 300px;
+    height: 200px;
+    border-radius: 4px;
 }
 
 .son_page_label_div{
