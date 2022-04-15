@@ -7,7 +7,7 @@ function fly2school(viewer) {
         destination: Cesium.Cartesian3.fromDegrees(113.570, 34.8125, 3500.0),
     });
     // viewer.camera.flyTo({
-    //     destination: Cesium.Cartesian3.fromDegrees(9.18141, 45.47121, 10000.0),
+    //     destination: Cesium.Cartesian3.fromDegrees(9.18141, 45.47121, 10000.0),  // 意大利米兰（街景图象其中一张图像）
     // });
 }
 
@@ -46,12 +46,9 @@ function target_positioning() {
         target_positioning.style.display = 'block';
         son_page_name = 'target_positioning';
     }
-
 }
 
-
 function monitoring() {
-
     var monitoring = document.getElementById("monitoring");
     if (son_page_name === "monitoring") {
         monitoring.style.display = 'none';
@@ -67,7 +64,6 @@ function monitoring() {
     }
 
 }
-
 
 function situation_awareness() {
     var situation_awareness = document.getElementById("situation_awareness");
@@ -85,20 +81,13 @@ function situation_awareness() {
     }
 }
 
-function show_points(cesium) {
-    // var latitude = [45.47121, 45.47118, 45.47104, 45.47100, 45.47093, 45.47086, 45.47075, 45.47047, 45.47031, 45.47013, 45.47013, 45.47013, 45.47015, 45.47016, 45.47017, 45.47018, 45.47019, 45.47019, 45.46999, 45.46957, 45.46942, 45.46929, 45.46910, 45.46895, 45.46888, 45.46884];
-    // var longitude = [9.18141, 9.18136, 9.18151, 9.18155, 9.18160, 9.18164, 9.18169, 9.18177, 9.18182, 9.18185, 9.18213, 9.18261, 9.18304, 9.18323, 9.18335, 9.18335, 9.18337, 0.18325, 9.18307, 9.18298, 9.18292, 9.18289];
-    //
-    // for (i = 0; i < latitude.length; i++) {
-    //     for (j = 0; j < longitude.length; j++) {
-    //         // new cesium.PointGraphics({color:Cesium.Color.fromCssColorString("#FFFF00"), pixelSize:10})
-    //     }
-    // }
+function file_import() {
+    document.getElementById("files").click()
+    var selected_file = document.getElementById("files").files[0];  // 弹窗获取文件
+    var file_name = selected_file.name;  // 读取文件名
+    var file_size = selected_file.size;  // 获取文件大小
+    var file_dir = selected_file.directory
+    alert(file_name + " // " + file_size + " // " + file_dir)
 }
-
-function BrowseFolder() {
-
-    path = prompt("Please Input Path", "");
-
-}
+// ----------------------------------------------------------------------------------------
 
