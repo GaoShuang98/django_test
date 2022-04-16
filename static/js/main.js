@@ -11,7 +11,6 @@ function fly2school(viewer) {
     // });
 }
 
-
 function import_img() {
     alert("导入图像");
 }
@@ -62,7 +61,6 @@ function monitoring() {
         monitoring.style.display = 'block';
         son_page_name = 'monitoring';
     }
-
 }
 
 function situation_awareness() {

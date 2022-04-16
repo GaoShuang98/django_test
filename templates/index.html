@@ -8,12 +8,54 @@
     <title>localization sys.</title>
     <script src="../static/Cesium/Cesium.js"></script>
     <script src="../static/js/main.js"></script>
-
+    <link rel="icon" href="../static/imgs/favicon.ico">
     <link rel="stylesheet" href="../static/css/index.css">
     <link rel="stylesheet" href="../static/Cesium/Widgets/widgets.css">
 </head>
 
 <body id="body">
+
+<div class="mainHeader">
+    <div class="loading active" id="navLoadEle" style="display: none;">正在加载菜单...</div>
+    <div class="logo"><p><img src="../static/imgs/logo.png">综合态势感知系统</p></div>
+    <div class="userInfo" id="userInfo"><p href="#" class="fa fa-user-circle-o fa-2x"></p>
+        <dl style="height: 0px;">
+            <dt><span id="lblUserName">xxgcdx</span></dt>
+            <dd><a href="javascript:logout();">退出</a><i class="fa fa-sign-out"></i></dd>
+        </dl>
+    </div>
+    <div class="mediaNav fa fa-navicon" id="mediaNav"></div>
+    <ul class="nav" id="navList">
+        <li><a href="javascript:void(0)"><span class="fa fa-home"></span>首页</a>
+            <div class="navCon"></div>
+        </li>
+        <li><a href="javascript:void(0)"><span class="fa fa-eye"></span>信息展示</a>
+            <div class="navCon"></div>
+        </li>
+        <li><a href="javascript:void(0)"><span class="fa fa-building"></span>三维模型</a>
+            <div class="navCon"></div>
+        </li>
+        <li><a href="javascript:void(0)"><span class="fa fa-area-chart"></span>数据分析</a>
+            <div class="navCon"></div>
+        </li>
+        <li><a href="javascript:void(0)"><span class="fa fa-magic"></span>综合态势</a>
+            <div class="navCon">
+                <dl class="secList">
+                    <dt><a href="javascript:void(0)"><span class="fa fa-bullseye"></span>高校分布</a></dt>
+                    <dt><a href="javascript:void(0)"><span class="fa fa-ticket"></span>动态线</a></dt>
+                    <dt><a href="javascript:void(0)"><span class="fa fa-empire"></span>动态围墙</a></dt>
+                    <dt><a href="javascript:void(0)"><span class="fa fa-wpexplorer"></span>扫描圈</a></dt>
+                    <dt><a href="javascript:void(0)"><span class="fa fa-area-chart"></span>淮海经济区</a></dt>
+                    <dt><a href="javascript:void(0)"><span class="fa fa-image"></span>热力图</a></dt>
+                    <dt><a href="javascript:void(0)"><span class="fa fa-dashboard"></span>全省经济指标</a></dt>
+                    <dt><a href="javascript:void(0)"><span class="fa fa-send"></span>迁徙图</a></dt>
+                </dl>
+            </div>
+        </li>
+    </ul>
+
+    <div class="positionMarker" id="positionMarker" style="display: block; left: 760.663px; width: 0px;"></div>
+</div>
 
 <div>
     <input type="file" id="files" style="display:none" onchange="file_import()">
@@ -21,9 +63,13 @@
 
 <div class="btn-container">
     <button class="button" onclick="img_positioning()">图像定位</button>
+    <br>
     <button class="button" onclick="target_positioning()">目标定位</button>
+    <br>
     <button class="button" onclick="fly2school(viewer)">学校视角</button>
+    <br>
     <button class="button" onclick="monitoring()">舆情监测</button>
+    <br>
     <button class="button" onclick="situation_awareness()">态势感知</button>
 </div>
 
