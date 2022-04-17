@@ -186,12 +186,12 @@ body{
 }
 
 p{
-        --sr-annote-color-0: #b4d9fb;
-    --sr-annote-color-1: #ffeb3b;
-    --sr-annote-color-2: #a2e9f2;
-    --sr-annote-color-3: #a1e0ff;
-    --sr-annote-color-4: #a8ea68;
-    --sr-annote-color-5: #ffb7da;
+    /*    --sr-annote-color-0: #b4d9fb;*/
+    /*--sr-annote-color-1: #ffeb3b;*/
+    /*--sr-annote-color-2: #a2e9f2;*/
+    /*--sr-annote-color-3: #a1e0ff;*/
+    /*--sr-annote-color-4: #a8ea68;*/
+    /*--sr-annote-color-5: #ffb7da;*/
     font: 1em/normal '\5fae\8f6f\96c5\9ed1','\9ed1\4f53',Arial;
     margin: 0;
     padding: 0;
@@ -206,12 +206,12 @@ p{
 }
 
 a{
-    --sr-annote-color-0: #b4d9fb;
-    --sr-annote-color-1: #ffeb3b;
-    --sr-annote-color-2: #a2e9f2;
-    --sr-annote-color-3: #a1e0ff;
-    --sr-annote-color-4: #a8ea68;
-    --sr-annote-color-5: #ffb7da;
+    /*--sr-annote-color-0: #b4d9fb;*/
+    /*--sr-annote-color-1: #ffeb3b;*/
+    /*--sr-annote-color-2: #a2e9f2;*/
+    /*--sr-annote-color-3: #a1e0ff;*/
+    /*--sr-annote-color-4: #a8ea68;*/
+    /*--sr-annote-color-5: #ffb7da;*/
     font: 1em/normal '\5fae\8f6f\96c5\9ed1','\9ed1\4f53',Arial;
     list-style: none;
     text-decoration: none;
@@ -227,12 +227,13 @@ a{
 }
 
 .mainHeader .logo, .menu dl, .nav, .nav .navCon dl {
-    float: left
+    float: left;
+    height: 60px;
 }
 
-/*.mediaNav, .systemConfig, .userInfo {*/
-/*    float: right*/
-/*}*/
+.mediaNav, .systemConfig, .userInfo {
+    float: right
+}
 
 .menu .secList {
     clear: both
@@ -243,7 +244,10 @@ a{
 }
 
 .nav li {
-    display: inline-block
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 .menu dl a, .nav .active .navCon, .nav .navCon dl.active dd, .nav li a, .nav.active, .systemConfig a, .userInfo dl dd a {
@@ -339,7 +343,7 @@ a{
 }
 
 .nav li a, .systemConfig {
-    line-height: 60px
+    line-height: 40px
 }
 
 .mainHeader, .nav .navCon, .userInfo dl {
@@ -356,17 +360,17 @@ a{
 
 .nav {
     margin: 0 0 0 80px;
-        float: left;
-
+    float: left;
+    box-sizing: border-box;
 }
 
 .nav li {
-    position: relative;
+    position: absolute;
     z-index: 1;
-    margin: 0 .2em 0 0;
-    float: left;
+    /*margin: 0 .2em 0 0;*/
+    float: right;
     padding: 0;
-
+    margin: 0;
 }
 
 .nav li:hover .navCon {
@@ -406,7 +410,8 @@ a{
 .nav li a {
     color: #fff;
     padding: 0 .4em;
-    text-align: center
+    text-align: center;
+
 }
 
 .nav li a:hover {
