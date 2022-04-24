@@ -5,6 +5,7 @@ function fly2school(viewer) {
     element.style.display = 'none'
     viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(113.570, 34.8125, 3500.0),
+         // destination: Cesium.Cartesian3.fromDegrees(114.489878, 35.029329, 3500.0),
     });
     // viewer.camera.flyTo({
     //     destination: Cesium.Cartesian3.fromDegrees(9.18141, 45.47121, 10000.0),  // 意大利米兰（街景图象其中一张图像）
@@ -89,6 +90,14 @@ function cesium_container_clicked(){
     }
 }
 
+function menu_localization_clicked(){
+    var e = document.getElementById('drop-menu-localization');
+    if (e.style.display === 'block'){
+        e.style.display = 'none'
+    } else {
+        e.style.display = 'block'
+    }
+}
 
 function file_import() {
     document.getElementById("files").click()
