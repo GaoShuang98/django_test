@@ -41,7 +41,6 @@
         </li>
         <li><a href="javascript:void(0)"><span class="menu-localization"></span>目标态势</a>
             <div class="navCon"></div>
-
         </li>
     </ul>
 
@@ -50,10 +49,10 @@
 
 <div class="dropdown-menu">
     <menu class="secList">
-        <li><a href="javascript:void(0)"><span class="fa fa-bullseye"></span>图像定位</a></li>
-        <li><a href="javascript:void(0)"><span class="fa fa-ticket"></span>目标定位</a></li>
-        <li><a href="javascript:void(0)"><span class="fa fa-empire"></span>学校视角</a></li>
-        <li><a href="javascript:void(0)"><span class="fa fa-wpexplorer"></span>动态感知</a></li>
+        <li><a href="javascript:img_positioning()"><span class="dropdown-menu-list" id="fa fa-bullseye"></span>图像定位</a></li>
+        <li><a href="javascript:target_positioning()"><span class="dropdown-menu-list" id="fa fa-ticket"></span>目标定位</a></li>
+        <li><a href="javascript:fly2school(viewer)"><span class="dropdown-menu-list" id="fa fa-empire"></span>学校视角</a></li>
+        <li><a href="javascript:situation_awareness()"><span class="dropdown-menu-list" id="fa fa-wpexplorer"></span>态势感知</a></li>
     </menu>
 </div>
 
@@ -77,7 +76,7 @@
     <div class="son_page_title_div"><b>图像定位111</b></div>
     <div class="son_page_button_div">
         <!-- <button class="son_button" id="file_import" onclick="file_import()">导入图像</button> -->
-        <input type="file"  id="file" name="导入图像" formenctype="multipart/form-data"/>
+        <input type="file" id="file" name="导入图像" formenctype="multipart/form-data"/>
         <br>
         <button class="son_button" onclick="import_img()">开始检索</button>
         <br>
@@ -136,7 +135,7 @@
     <button class="button" onclick="situation_awareness()">势态感知</button>
 </div>
 
-<div id="cesiumContainer">
+<div id="cesiumContainer" onclick="cesium_container_clicked()">
     <script>
         token_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlY2Y0NDkzZS05ZWYzLTQ0NTQtOTM0OC1hODI1YWZlNGE3MDEiLCJpZCI6ODUxOTAsImlhdCI6MTY0NjgzNTE4OH0._cSQsUPts0jXVYrw5r-8RP1an5oECzjKRj99FN9Apx4';
 

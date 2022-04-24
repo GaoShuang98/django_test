@@ -79,6 +79,17 @@ function situation_awareness() {
     }
 }
 
+function cesium_container_clicked(){
+    if (son_page_name === "none") {
+        return 0
+    } else {
+        var e = document.getElementById(son_page_name)
+        e.style.display = 'none'
+        son_page_name = 'none';
+    }
+}
+
+
 function file_import() {
     document.getElementById("files").click()
     var selected_file = document.getElementById("files").files[0];  // 弹窗获取文件
