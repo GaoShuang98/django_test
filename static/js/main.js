@@ -81,21 +81,23 @@ function situation_awareness() {
 }
 
 function cesium_container_clicked(){
+    var a = document.getElementById('dropdown-menu-localization');
+    a.style.display = 'none';
     if (son_page_name === "none") {
-        return 0
+        return 0;
     } else {
-        var e = document.getElementById(son_page_name)
-        e.style.display = 'none'
+        var e = document.getElementById(son_page_name);
+        e.style.display = 'none';
         son_page_name = 'none';
     }
 }
 
 function menu_localization_clicked(){
-    var e = document.getElementById('drop-menu-localization');
+    var e = document.getElementById('dropdown-menu-localization');
     if (e.style.display === 'block'){
-        e.style.display = 'none'
+        e.style.display = 'none';
     } else {
-        e.style.display = 'block'
+        e.style.display = 'block';
     }
 }
 
@@ -104,8 +106,8 @@ function file_import() {
     var selected_file = document.getElementById("files").files[0];  // 弹窗获取文件
     var file_name = selected_file.name;  // 读取文件名
     var file_size = selected_file.size;  // 获取文件大小
-    var file_dir = selected_file.directory
-    alert(file_name + " // " + file_size + " // " + file_dir)
+    var file_dir = selected_file.directory;
+    alert(file_name + " // " + file_size + " // " + file_dir);
 }
 
 // ----------------------------------------------------------------------------------------

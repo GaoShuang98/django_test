@@ -347,13 +347,13 @@ a{
 /*    background: rgba(255, 255, 255, .1)*/
 /*}*/
 
-.nav li a:hover span {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1)
-}
+/*.nav li a:hover span {*/
+/*    -webkit-transform: scale(1.1);*/
+/*    -moz-transform: scale(1.1);*/
+/*    -o-transform: scale(1.1);*/
+/*    -ms-transform: scale(1.1);*/
+/*    transform: scale(1.1)*/
+/*}*/
 
 .nav li span {
     width: 1.4em
@@ -367,6 +367,11 @@ a{
     text-decoration: none;
     background-color: #737373;
 }
+
+.nav > li > #menu-localization:hover #dropdown-menu-localization{
+    display: block;
+}
+
 
 .mainHeader .loading {
     color: #fff
@@ -452,6 +457,7 @@ a{
 .dropdown-menu li :hover{  // 鼠标停留背景变白
     text-decoration: none;
     background-color: #8f8f8f;
+
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
