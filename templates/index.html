@@ -48,7 +48,7 @@
     <div class="positionMarker" id="positionMarker" style="display: block; left: 760.663px; width: 0px;"></div>
 </div>
 
-<div class="dropdown-menu" style="left: 383.062px; width: auto; display: block; background: #22ee22; color: #003da8">
+<div class="dropdown-menu">
     <menu class="secList">
         <li><a href="javascript:void(0)"><span class="fa fa-bullseye"></span>高校分布</a></li>
         <li><a href="javascript:void(0)"><span class="fa fa-ticket"></span>动态线</a></li>
@@ -57,39 +57,6 @@
     </menu>
 </div>
 
-
-<!-- <div class="toolBarRight animation-slide-top no-print-view" style="top: 10px; left: auto; right: 10px;"><button type="button" class="widget-btn btn btn-link toolBarRight-btn " data-widget="widgets/manageBasemaps/widget.js">                       <i class="fa fa-map"></i>底图
-</button><button type="button" class="widget-btn btn btn-link toolBarRight-btn " data-widget="widgets/manageLayers/widget.js">                       <i class="fa fa-tasks"></i>图层
-</button><div class="btn-group">
-    <button type="button" class="btn btn-link toolBarRight-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-        <i class="fa fa-cubes"></i>工具<span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu dropdown-menu-right toolBarRight-dropdown-menu"><li class="widget-btn" data-widget="widgets/measure/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-calculator"></i>图上量算</a>
-    </li><li class="widget-btn" data-widget="widgets/analysis/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-bar-chart"></i>空间分析</a>
-    </li><li class="widget-btn" data-widget="widgets/centerXY/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-map-pin"></i>坐标定位</a>
-    </li><li class="widget-btn" data-widget="widgets/navXZQH/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-paper-plane"></i>地区导航</a>
-    </li><li class="widget-btn" data-widget="widgets/addmarker/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-edit"></i>我的标记</a>
-    </li><li class="widget-btn" data-widget="widgets/bookmark/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-tags"></i>视角书签</a>
-    </li><li class="widget-btn" data-widget="widgets/print/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-print"></i>地图打印</a>
-    </li><li class="widget-btn" data-widget="widgets/plot/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-object-group"></i>图上标绘</a>
-    </li><li class="widget-btn" data-widget="widgets/roamLine/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-send-o"></i>飞行漫游</a>
-    </li><li class="widget-btn" data-widget="widgets/queryRoute/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-level-up"></i>路线导航</a>
-    </li><li class="widget-btn" data-widget="widgets/mapSplit/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-columns"></i>卷帘对比</a>
-    </li><li class="widget-btn" data-widget="widgets/mapCompare/widget.js">
-        <a href="javascript:void(0)"><i class="fa fa-window-restore"></i>分屏对比</a>
-    </li> </ul></div></div>
--->
 <div>
     <input type="file" id="files" style="display:none" onchange="file_import()">
 </div>
@@ -109,7 +76,8 @@
 <div class="son_page" id="img_positioning">
     <div class="son_page_title_div"><b>图像定位111</b></div>
     <div class="son_page_button_div">
-        <button class="son_button" id="file_import" onclick="file_import()">导入图像</button>
+        <!-- <button class="son_button" id="file_import" onclick="file_import()">导入图像</button> -->
+        <input type="file"  id="file" name="导入图像" formenctype="multipart/form-data"/>
         <br>
         <button class="son_button" onclick="import_img()">开始检索</button>
         <br>

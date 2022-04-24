@@ -87,5 +87,6 @@ function file_import() {
     var file_dir = selected_file.directory
     alert(file_name + " // " + file_size + " // " + file_dir)
 }
+
 // ----------------------------------------------------------------------------------------
 
