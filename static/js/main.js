@@ -5,7 +5,7 @@ function fly2school(viewer) {
     element.style.display = 'none'
     viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(113.570, 34.8125, 3500.0),
-         // destination: Cesium.Cartesian3.fromDegrees(114.489878, 35.029329, 3500.0),
+        // destination: Cesium.Cartesian3.fromDegrees(114.489878, 35.029329, 3500.0),
     });
     // viewer.camera.flyTo({
     //     destination: Cesium.Cartesian3.fromDegrees(9.18141, 45.47121, 10000.0),  // 意大利米兰（街景图象其中一张图像）
@@ -80,8 +80,14 @@ function situation_awareness() {
     }
 }
 
-function cesium_container_clicked(){
-    let a = document.getElementById('dropdown-menu-localization');
+function cesium_container_clicked() {
+    let a = document.getElementById('dropdown-menu-1');
+    a.style.display = 'none';
+    a = document.getElementById('dropdown-menu-2');
+    a.style.display = 'none';
+    a = document.getElementById('dropdown-menu-3');
+    a.style.display = 'none';
+    a = document.getElementById('dropdown-menu-4');
     a.style.display = 'none';
     if (son_page_name === "none") {
         return 0;
@@ -92,14 +98,108 @@ function cesium_container_clicked(){
     }
 }
 
-function menu_localization_clicked(){
-    let e = document.getElementById('dropdown-menu-localization');
-    if (e.style.display === 'block'){
+function son_page_clicked() {
+    let a = document.getElementById('dropdown-menu-1');
+    a.style.display = 'none';
+    a = document.getElementById('dropdown-menu-2');
+    a.style.display = 'none';
+    a = document.getElementById('dropdown-menu-3');
+    a.style.display = 'none';
+    a = document.getElementById('dropdown-menu-4');
+    a.style.display = 'none';
+}
+
+function menu_1_clicked() {
+    let menus = document.getElementsByClassName('dropdown-menu');
+    for (i = 0; i < 4; i++) {
+        menus.item(i).style.display = 'none'
+    }
+    let e = document.getElementById('dropdown-menu-1');
+    if (e.style.display === 'block') {
         e.style.display = 'none';
     } else {
         e.style.display = 'block';
     }
 }
+
+function menu_2_clicked() {
+    let menus = document.getElementsByClassName('dropdown-menu');
+    for (i = 0; i < 4; i++) {
+        menus.item(i).style.display = 'none'
+    }
+    e = document.getElementById('dropdown-menu-2');
+    if (e.style.display === 'block') {
+        e.style.display = 'none';
+    } else {
+        e.style.display = 'block';
+    }
+}
+
+function menu_3_clicked() {
+    let menus = document.getElementsByClassName('dropdown-menu');
+      for (i = 0; i < 4; i++) {
+        menus.item(i).style.display = 'none'
+    }
+    e = document.getElementById('dropdown-menu-3');
+    if (e.style.display === 'block') {
+        e.style.display = 'none';
+    } else {
+        e.style.display = 'block';
+    }
+}
+
+function menu_4_clicked() {
+    let menus = document.getElementsByClassName('dropdown-menu');
+    for (i = 0; i < 4; i++) {
+        menus.item(i).style.display = 'none'
+    }
+    e = document.getElementById('dropdown-menu-4');
+    if (e.style.display === 'block') {
+        e.style.display = 'none';
+    } else {
+        e.style.display = 'block';
+    }
+}
+
+//
+// function dropdown_menu_fun(show_name, menu_name){
+//             //获取需要悬浮的对象
+//             let show = document.getElementById(show_name);
+//             //获取被隐藏的菜单
+//             let menu = document.getElementById(menu_name);
+//
+//             //给show添加鼠标悬浮事件
+//             show.onmouseover = function(){
+//                 //改变菜单的内联样式display为block
+//                 menu.style.display = "block";
+//             }
+//
+//             //
+//             show.onmouseout = function(){
+//                 //获取菜单栏的坐标值
+//                 let menux = menu.offsetLeft;
+//                 let menuy = menu.offsetTop;
+//                 let menuX = menu.offsetLeft+menu.offsetWidth;
+//                 let menuY = menu.offsetTop+menu.offsetHeight;
+//
+//                 //获取鼠标的坐标值
+//                 let event = window.event;
+//                 let mouseX = event.clientX;
+//                 let mouseY = event.clientY;
+//
+//                 if(mouseX<menux || mouseX>menuX || mouseY<menuY || mouseY>menuY){
+//                     menu.style.display = "none";
+//                 }
+//             }
+//
+//             //分别给menu对象绑定鼠标悬浮和鼠标离开事件
+//             menu.onmouseover = function(){
+//                 menu.style.display = "block";
+//             }
+//             menu.onmouseleave = function(){
+//                 menu.style.display = "none";
+//             }
+//         }
 
 function file_import() {
     document.getElementById("files").click()
