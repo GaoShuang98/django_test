@@ -11,6 +11,7 @@
     <link rel="icon" href="../static/imgs/favicon.ico">
     <link rel="stylesheet" href="../static/css/index.css">
     <link rel="stylesheet" href="../static/Cesium/Widgets/widgets.css">
+
 </head>
 
 <body id="body">
@@ -20,64 +21,53 @@
     <div class="logo"><p><img src="../static/imgs/logo.png">综合态势感知系统</p></div>
 
     <div class="mediaNav fa fa-navicon" id="mediaNav"></div>
-    <ul class="nav" id="navList">
+    <div class="nav" id="navList">
         <li><a href="javascript:menu_4_clicked()" id="menu-4"><span class="menu-li"></span>三维模型</a>
-            <div class="navCon"></div>
-        </li>
-        <li><a href="javascript:menu_3_clicked()" id="menu-3"><span class="menu-li"></span>数据分析</a>
-            <div class="navCon"></div>
-        </li>
-        <li><a href="javascript:menu_2_clicked()" id="menu-2"><span class="menu-li"></span>综合态势</a>
-            <div class="navCon">
-                <dl class="secList">
-                    <dt><a href="javascript:void(0)" ><span class="menu-li"></span>xxxxx</a></dt>
-                </dl>
+            <div class="dropdown-menu" id="dropdown-menu-4">
+                <menu class="secList">
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="img-positioning-2"></span>1111</a>
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="target-positioning-2"></span>2222</a>
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="fly2school-2"></span>3333</a>
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="situation-awareness-2"></span>4444</a>
+
+                </menu>
             </div>
         </li>
-        <li><a href="javascript:menu_1_clicked()" id="menu-1"><span class="menu-li" ></span>目标态势</a>
-            <div class="navCon"></div>
-
+        <li><a href="javascript:menu_3_clicked()" id="menu-3"><span class="menu-li"></span>数据分析</a>
+            <div class="dropdown-menu" id="dropdown-menu-3">
+                <menu class="secList">
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="img-positioning-4"></span>1111</a>
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="target-positioning-4"></span>2222</a>
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="fly2school-4"></span>3333</a>
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="situation-awareness-4"></span>4444</a>
+                </menu>
+            </div>
         </li>
-    </ul>
+        <li><a href="javascript:menu_2_clicked()" id="menu-2"><span class="menu-li"></span>综合态势</a>
+            <div class="dropdown-menu" id="dropdown-menu-2">
+                <menu class="secList">
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="img-positioning-3"></span>1111</a>
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="target-positioning-3"></span>2222</a>
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="fly2school-3"></span>3333</a>
+                    <a href="javascript:void(0)"><span class="dropdown-menu-list" id="situation-awareness-3"></span>4444</a>
+                </menu>
+            </div>
+        </li>
+        <li><a href="javascript:menu_1_clicked()" id="menu-1"><span class="menu-li"></span>目标态势</a>
+            <div class="dropdown-menu" id="dropdown-menu-1">
+                <menu class="secList">
+                    <a href="javascript:img_positioning()"><span class="dropdown-menu-list" id="img-positioning-1"></span>图像定位</a>
+                    <a href="javascript:target_positioning()"><span class="dropdown-menu-list" id="target-positioning-1"></span>目标定位</a>
+                    <a href="javascript:fly2school(viewer)"><span class="dropdown-menu-list" id="fly2school-1"></span>学校视角</a>
+                    <a href="javascript:situation_awareness()"><span class="dropdown-menu-list" id="situation-awareness-1"></span>态势感知</a>
+                </menu>
+            </div>
+        </li>
+    </div>
 
-    <div class="positionMarker" id="positionMarker" style="display: block; left: 760.663px; width: 0px;"></div>
+<div class="positionMarker" id="positionMarker" style="display: block; left: 760.663px; width: 0px;"></div>
 </div>
 <!-- <script>window.onload = dropdown_menu_fun("menu-localization", "dropdown-menu-localizatio")</script> -->
-<div class="dropdown-menu" id="dropdown-menu-1">
-    <menu class="secList">
-        <li><a href="javascript:img_positioning()"><span class="dropdown-menu-list" id="img-positioning-1"></span>图像定位</a></li>
-        <li><a href="javascript:target_positioning()"><span class="dropdown-menu-list" id="target-positioning-1"></span>目标定位</a></li>
-        <li><a href="javascript:fly2school(viewer)"><span class="dropdown-menu-list" id="fly2school-1"></span>学校视角</a></li>
-        <li><a href="javascript:situation_awareness()"><span class="dropdown-menu-list" id="situation-awareness-1"></span>态势感知</a></li>
-    </menu>
-</div>
-
-<div class="dropdown-menu" id="dropdown-menu-2">
-    <menu class="secList">
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="img-positioning-2"></span>1111</a></li>
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="target-positioning-2"></span>2222</a></li>
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="fly2school-2"></span>3333</a></li>
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="situation-awareness-2"></span>4444</a></li>
-    </menu>
-</div>
-
-<div class="dropdown-menu" id="dropdown-menu-3">
-    <menu class="secList">
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="img-positioning-3"></span>1111</a></li>
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="target-positioning-3"></span>2222</a></li>
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="fly2school-3"></span>3333</a></li>
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="situation-awareness-3"></span>4444</a></li>
-    </menu>
-</div>
-
-<div class="dropdown-menu" id="dropdown-menu-4">
-    <menu class="secList">
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="img-positioning-4"></span>1111</a></li>
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="target-positioning-4"></span>2222</a></li>
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="fly2school-4"></span>3333</a></li>
-        <li><a href="javascript:void(0)"><span class="dropdown-menu-list" id="situation-awareness-4"></span>4444</a></li>
-    </menu>
-</div>
 
 <!--
 <div class="btn-container">
@@ -94,19 +84,23 @@
 -->
 
 <div class="son_page" id="img_positioning" onclick="son_page_clicked()">
+
     <div class="son_page_title_div"><b>图像定位</b></div>
+
     <div class="son_page_button_div">
-        <!-- <button class="son_button" id="file_import" onclick="file_import()">导入图像</button> -->
-        <input class="son_button" type="file" id="file" name="导入图像" formenctype="multipart/form-data" style="background: #22ee22"/>
+        <form action="{{ request.build_absolute_url }}upload/" method="POST" enctype="multipart/form-data">
+          <input type="file" name="file"/>
+          <br />
+          <input type="submit" value="Upload File"/>
+        </form>
+        <button class="son_button" id="file_import" onclick="import_img()">导入图像</button>
         <br>
         <button class="son_button" onclick="import_img()">开始检索</button>
         <br>
         <button class="son_button" onclick="import_img()">位置显示</button>
         <br>
-        <button class="son_button" onclick="import_img()">----</button>
-        <br>
-        <button class="son_button" onclick="import_img()">----</button>
     </div>
+
     <div class="son_page_body_div">
         <div class="img_div">
             <canvas class="img_canvas" id="query_img_canvas">
@@ -169,6 +163,7 @@
             homeButton: false,              //是否显示Home按钮
             fullscreenButton: false,        //是否显示全屏按钮1
             timeline: false,                 //时间轴控件
+            infoBox: false,
             animation: false,                //动画控件
             imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
                 url: 'http://map.geoq.cn/arcgis/rest/services/ChinaOnlineStreetPurplishBlue/MapServer'

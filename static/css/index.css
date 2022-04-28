@@ -85,6 +85,27 @@ body{
     top: 2%;
 }
 
+.select-img-div{
+    display: none;
+    top: 30%;
+    left: 30%;
+    height: 300px;
+    width: 400px;
+    opacity: 100% !important;
+    position: relative;
+    z-index: 102;
+    border: 2px solid #6498f5;
+    border-radius: 4px;
+}
+
+.input_div{
+    height: auto;
+    width: auto;
+    position: relative;
+    top: 45%;
+    left: auto;
+}
+
 .son_page_button_div {
     border: 2px solid #6498f5;
     border-radius: 4px;
@@ -92,12 +113,14 @@ body{
     left: 1%;
     top: 25%;
     margin: 4px;
+    z-index: 101;
 }
 
 .son_button {
     cursor: pointer;
     background: transparent;
-    width: 85px;
+    /*width: 85px;*/
+    width: 200px;
     height: auto;
     border: 1px solid #bdc0c9;
     color: #d3d5de;
@@ -125,6 +148,9 @@ body{
 
 .img_div {
     /*border: 1px solid rgb(141, 177, 243);*/
+    position: relative;
+    top: auto;
+    left: auto;
 }
 
 .img_canvas {
@@ -146,6 +172,9 @@ body{
 .result_imgs_div{
     display: flex;
     justify-content: space-around;
+    position: relative;
+    top: auto;
+    left: auto;
 }
 
 .toolBarRight .animation-slide-top .no-print-view{
@@ -371,6 +400,10 @@ a{
     background-color: #737373;
 }
 
+#menu-1:hover #dropdown-menu-1{
+    display: block !important;
+}
+
 .mainHeader .loading {
     color: #fff
 }
@@ -401,6 +434,7 @@ a{
     display: block !important;
 }
 
+
 .dropdown-menu {
     position: absolute;
     z-index: 100;
@@ -425,19 +459,19 @@ a{
 
 #dropdown-menu-1{
     top: 60px;
-    left: 300px;
+    left: 0;
 }
 #dropdown-menu-2{
     top: 60px;
-    left: 396px;
+    left: 0;
 }
 #dropdown-menu-3{
     top: 60px;
-    left: 492px;
+    left: 0;
 }
 #dropdown-menu-4{
     top: 60px;
-    left: 588px;
+    left: 0;
 }
 .dropdown-menu .secList{
     padding: 0;
@@ -447,28 +481,22 @@ a{
     width: auto;
     /*float: none;*/
 }
-.dropdown-menu li{
+.dropdown-menu a{
     padding:  0;
     margin: 0;
     border: 0;
     list-style: none;
     height: auto;
-    width: 100px;
+    width: 97px;
     text-align: center;
 }
 
-.dropdown-menu a{
-    padding: 0;
-    margin: 0;
-    border: 0;
-    height: auto;
-    width: auto;
-}
-
-.dropdown-menu li:hover{  // 鼠标停留背景变白
+.dropdown-menu a:hover{  // 鼠标停留背景变白
     text-decoration: none;
     background-color: #8f8f8f;
 }
+
+
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
     .mainHeader {

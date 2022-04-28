@@ -7,6 +7,7 @@
 
 from django import forms  # 导入表单模块
 
+
 class UploadFileForm(forms.Form):
     title = forms.CharField(max_length=50)  # 文件标题
     file = forms.FileField()  # 表单字段
